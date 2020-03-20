@@ -1,0 +1,12 @@
+version: '2'
+services: 
+    web:
+        build: 
+            context: ./
+            dockerfile: Dockerfile
+            args:
+                app_env: dev
+        ports: 
+            - "8080:8080"
+        volumes: 
+            - ./app:/go/src/myproject/app
