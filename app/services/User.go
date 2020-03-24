@@ -1,10 +1,12 @@
 package services
 
-import "myproject/app/config"
+import (
+	"myproject/app/config"
 
-// import "conferencing/app/utils"
+	"github.com/gin-gonic/gin"
+)
 
-func Login(config *config.Config) string {
-	
-	return "tests"
+func Login(config *config.Config, c *gin.Context) string {
+
+	return config.Env.GetString("server.port")
 }

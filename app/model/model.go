@@ -2,8 +2,11 @@ package model
 
 import "github.com/jinzhu/gorm"
 
-type Product struct {
+type User struct {
 	gorm.Model
-	Code  string
-	Price uint
+	Email  string
+	FirstName string
+	LastName string
+	Password string
+	Token string
 }

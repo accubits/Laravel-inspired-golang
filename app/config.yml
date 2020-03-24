@@ -1,2 +1,8 @@
 server:
     port: 8080
+database:
+    port: 3306
+    name: mydb
+    user: user
+    password: password
+    host: db

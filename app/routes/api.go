@@ -11,12 +11,12 @@ func New() *gin.Engine{
 	r := gin.Default()
 	return r
 }
-
 //API handles all the routes
 func API(r *gin.Engine,config *config.Config) *gin.Engine {
 
-	r.GET("/ping", c.HomePage(config))
-	
+	r.POST("/login", c.Login(config))
+	r.POST("/register", c.Register(config))
+
 	return r
 }
 

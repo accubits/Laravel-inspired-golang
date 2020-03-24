@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Init initalize the middlewares
+//New initalize the middlewares
 func New(router *gin.Engine, config *config.Config) *gin.Engine {
 	router.Use(cors.Default())
 	return router
